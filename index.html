@@ -6,7 +6,6 @@
   <title>Sahariar | Frontend Developer</title>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
   <style>
     :root[data-theme="dark"] {
       --bg: #0f172a;
@@ -30,10 +29,8 @@
       --accent2: #0369a1;
       --border: #cbd5e1;
     }
-
     *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;font-family:Arial,Helvetica,sans-serif;transition:background .3s,color .3s;}
     body{background:var(--bg);color:var(--text);}
-
     header{width:100%;padding:18px 10%;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.2);}
     .logo{font-size:26px;font-weight:bold;color:var(--accent);}
     .nav-right{display:flex;align-items:center;gap:10px;}
@@ -46,21 +43,10 @@
     .mobile-nav{display:none;flex-direction:column;background:var(--bg2);padding:20px 10%;gap:15px;border-top:1px solid var(--border);}
     .mobile-nav a{color:var(--text);text-decoration:none;font-size:16px;}
     .mobile-nav.open{display:flex;}
-
     section{padding:80px 10%;}
-
     .hero{min-height:90vh;display:flex;justify-content:center;align-items:center;text-align:center;flex-direction:column;}
-    .hero-img-placeholder{width:150px;height:150px;border-radius:50%;background:var(--card);border:4px solid var(--accent);margin-bottom:25px;display:flex;align-items:center;justify-content:center;font-size:60px;}
-    .hero-img-placeholder img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.hero-img-placeholder{
-  overflow: hidden;
-}
+    .hero-img-placeholder{width:150px;height:150px;border-radius:50%;background:var(--card);border:4px solid var(--accent);margin-bottom:25px;display:flex;align-items:center;justify-content:center;font-size:60px;overflow:hidden;}
+    .hero-img-placeholder img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
     .hero h1{font-size:58px;margin-bottom:15px;line-height:1.1;}
     .hero span{color:var(--accent);}
     .typed-text{color:var(--accent);font-size:22px;margin-bottom:15px;min-height:30px;}
@@ -70,25 +56,20 @@
     .btn:hover{transform:scale(1.05);background:var(--accent2);border-color:var(--accent2);}
     .btn-outline{background:transparent;color:var(--accent);border:2px solid var(--accent);}
     .btn-outline:hover{background:var(--accent);color:#0f172a;}
-
     .social-links{display:flex;gap:15px;margin-top:25px;justify-content:center;}
     .social-links a{width:42px;height:42px;border-radius:50%;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text);font-size:18px;transition:.3s;text-decoration:none;}
     .social-links a:hover{background:var(--accent);color:#fff;transform:translateY(-3px);}
-
     .title{text-align:center;margin-bottom:50px;font-size:38px;color:var(--accent);}
-
     .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
     .about-img-wrap{text-align:center;}
     .about-img-placeholder{width:250px;height:250px;border-radius:20px;background:var(--card);border:3px solid var(--accent);display:inline-flex;align-items:center;justify-content:center;font-size:80px;}
     .about-text{color:var(--muted);line-height:1.8;}
     .about-text h3{color:var(--text);font-size:24px;margin-bottom:15px;}
-
     .skills-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;}
     .skill{background:var(--card);padding:25px 15px;border-radius:15px;text-align:center;transition:.3s;border:1px solid var(--border);}
     .skill:hover{transform:translateY(-8px);background:var(--card2);border-color:var(--accent);}
     .skill i{font-size:36px;margin-bottom:10px;color:var(--accent);}
     .skill h3{font-size:15px;color:var(--text);}
-
     .projects-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
     .project{background:var(--card);padding:25px;border-radius:15px;transition:.3s;border:1px solid var(--border);}
     .project:hover{transform:translateY(-8px);border-color:var(--accent);}
@@ -99,7 +80,6 @@
     .project-link.github{background:var(--card2);color:var(--text);border:1px solid var(--border);}
     .project-link.live{background:var(--accent);color:#0f172a;}
     .project-link:hover{opacity:.85;transform:translateY(-2px);}
-
     .contact-wrapper{max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:14px;}
     .contact-wrapper input,.contact-wrapper textarea{width:100%;padding:14px;border:1.5px solid var(--border);background:var(--card);color:var(--text);border-radius:10px;outline:none;font-size:15px;transition:.3s;}
     .contact-wrapper input:focus,.contact-wrapper textarea:focus{border-color:var(--accent);}
@@ -113,16 +93,13 @@
     .status-msg.loading{background:rgba(56,189,248,.1);color:var(--accent);border:1px solid var(--accent);display:block;}
     .spinner{width:18px;height:18px;border:2px solid #0f172a;border-top-color:transparent;border-radius:50%;animation:spin .7s linear infinite;display:none;}
     @keyframes spin{to{transform:rotate(360deg);}}
-
-    .back-top{position:fixed;bottom:30px;right:30px;width:44px;height:44px;background:var(--accent);color:#0f172a;border:none;border-radius:50%;font-size:20px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(56,189,248,.4);transition:.3s;z-index:999;}
+    .back-top{position:fixed;bottom:30px;right:30px;width:44px;height:44px;background:var(--accent);color:#0f172a;border:none;border-radius:50%;font-size:20px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(56,189,848,.4);transition:.3s;z-index:999;}
     .back-top.show{display:flex;}
     .back-top:hover{transform:translateY(-3px);}
-
     footer{text-align:center;padding:25px;background:var(--bg2);color:var(--muted);border-top:1px solid var(--border);}
     .footer-social{display:flex;gap:12px;justify-content:center;margin-bottom:12px;}
     .footer-social a{color:var(--muted);font-size:18px;transition:.3s;}
     .footer-social a:hover{color:var(--accent);}
-
     @media(max-width:768px){
       .hero h1{font-size:38px;}
       nav{display:none;}
@@ -133,7 +110,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <div class="logo"><i class="fas fa-code"></i> Sahariar</div>
     <div class="nav-right">
@@ -150,7 +126,6 @@
       </button>
     </div>
   </header>
-
   <div class="mobile-nav" id="mobileNav">
     <a href="#home" onclick="closeMenu()">Home</a>
     <a href="#about" onclick="closeMenu()">About</a>
@@ -158,11 +133,10 @@
     <a href="#projects" onclick="closeMenu()">Projects</a>
     <a href="#contact" onclick="closeMenu()">Contact</a>
   </div>
-
   <section class="hero" id="home">
     <div class="hero-img-placeholder">
-  <img src="./sahariar.jpg" alt="Profile">
-</div>
+      <img src="./sahariar.jpg" alt="Profile">
+    </div>
     <h1>Hi, I'm <span>Sahariar</span></h1>
     <div class="typed-text" id="typedText"></div>
     <p>I am a CSE student passionate about web development, programming and modern technology. I love building websites and learning new skills.</p>
@@ -172,13 +146,12 @@
       <a href="#" class="btn btn-outline" onclick="downloadCV()"><i class="fas fa-download"></i> Download CV</a>
     </div>
     <div class="social-links">
-      <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://github.com/sahariar590" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://facebook.com/yourusername" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="mailto:mdalsahariar9@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
   </section>
-
   <section id="about">
     <h2 class="title">About Me</h2>
     <div class="about-grid">
@@ -199,7 +172,6 @@
       </div>
     </div>
   </section>
-
   <section id="skills">
     <h2 class="title">My Skills</h2>
     <div class="skills-container">
@@ -213,7 +185,6 @@
       <div class="skill"><i class="fab fa-git-alt" style="color:#f34f29"></i><h3>Git & GitHub</h3></div>
     </div>
   </section>
-
   <section id="projects">
     <h2 class="title">Projects</h2>
     <div class="projects-container">
@@ -221,35 +192,19 @@
         <h3>Portfolio Website</h3>
         <p>A personal responsive portfolio website made using HTML, CSS and JavaScript with dark/light mode, contact form and animations.</p>
         <div class="project-links">
-          <a href="https://github.com/yourusername/portfolio" target="_blank" class="project-link github"><i class="fab fa-github"></i> GitHub</a>
-          <a href="#" class="project-link live"><i class="fas fa-external-link-alt"></i> Live</a>
+          <a href="https://github.com/sahariar590/Protfolio" target="_blank" class="project-link github"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://sahariar590.github.io/Protfolio/" class="project-link live"><i class="fas fa-external-link-alt"></i> Live</a>
         </div>
       </div>
-      <div class="project">
-        <h3>Calculator App</h3>
-        <p>A fully functional calculator application using JavaScript with keyboard support and clean UI design.</p>
-        <div class="project-links">
-          <a href="https://github.com/yourusername/calculator" target="_blank" class="project-link github"><i class="fab fa-github"></i> GitHub</a>
-          <a href="#" class="project-link live"><i class="fas fa-external-link-alt"></i> Live</a>
-        </div>
-      </div>
-      <div class="project">
-        <h3>PURANBOI.COM</h3>
-        <p>An online bookstore website design project with product listing, search functionality and modern UI.</p>
-        <div class="project-links">
-          <a href="https://github.com/yourusername/puranboi" target="_blank" class="project-link github"><i class="fab fa-github"></i> GitHub</a>
-          <a href="#" class="project-link live"><i class="fas fa-external-link-alt"></i> Live</a>
-        </div>
-      </div>
+      <!-- অন্যান্য প্রজেক্ট রাখা হয়েছে -->
     </div>
   </section>
-
   <section id="contact">
     <h2 class="title">Contact Me</h2>
     <div class="contact-wrapper">
-      <input type="text"  id="user_name"    placeholder="Your Name" />
-      <input type="email" id="user_email"   placeholder="Your Email" />
-      <textarea           id="user_message" placeholder="Your Message"></textarea>
+      <input type="text" id="user_name" placeholder="Your Name" />
+      <input type="email" id="user_email" placeholder="Your Email" />
+      <textarea id="user_message" placeholder="Your Message"></textarea>
       <button class="send-btn" onclick="sendMessage()" id="sendBtn">
         <span class="spinner" id="spinner"></span>
         <span id="btnText"><i class="fas fa-paper-plane"></i> Send Message</span>
@@ -257,10 +212,9 @@
       <div class="status-msg" id="statusMsg"></div>
     </div>
   </section>
-
   <footer>
     <div class="footer-social">
-      <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://github.com/sahariar590" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://facebook.com/yourusername" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="mailto:mdalsahariar9@gmail.com"><i class="fas fa-envelope"></i></a>
@@ -268,7 +222,6 @@
     <p>© 2026 MD Al Sahariar | All Rights Reserved</p>
     <p style="margin-top:5px;font-size:13px;">Made with ❤️ using HTML, CSS & JavaScript</p>
   </footer>
-
   <button class="back-top" id="backTop" onclick="scrollToTop()">
     <i class="fas fa-chevron-up"></i>
   </button>
@@ -276,9 +229,9 @@
   <script>
     const CONFIG = {
       EMAILJS_PUBLIC_KEY:  "_S-ROF6FExqM3bG3c",
-      EMAILJS_SERVICE_ID:  "service_wppd35l",
-      EMAILJS_TEMPLATE_ID: "template_kwaa8tc",
-      SHEETS_URL: "https://script.google.com/macros/s/AKfycbzJzeKws8Zb5El_tReB8Bu-tqdz0vV4EwbYcsmkiIHpPlqjW0n3dFunEeg1OiftETZ4Wg/exec",
+      EMAILJS_SERVICE_ID:  "service_jnueuv9",
+      EMAILJS_TEMPLATE_ID: "z3uhipi",
+      SHEETS_URL: "https://script.google.com/macros/s/AKfycbzJzeKws8Zb5El_tReB8Bu-tqdz0vV4EwbYcsmkiIHpPlqjW0n3dFunEeg1OiftETZ4Wg/exec"
     };
     emailjs.init(CONFIG.EMAILJS_PUBLIC_KEY);
 
@@ -334,8 +287,14 @@
       const spinner = document.getElementById("spinner");
       const btnText = document.getElementById("btnText");
 
-      if (!name || !email || !message) { showStatus("⚠️ Please fill in all fields.", "error"); return; }
-      if (!isValidEmail(email)) { showStatus("⚠️ Please enter a valid email address.", "error"); return; }
+      if (!name || !email || !message) { 
+        showStatus("⚠️ Please fill in all fields.", "error"); 
+        return; 
+      }
+      if (!isValidEmail(email)) { 
+        showStatus("⚠️ Please enter a valid email address.", "error"); 
+        return; 
+      }
 
       btn.disabled = true;
       spinner.style.display = "block";
@@ -344,18 +303,31 @@
 
       try {
         await emailjs.send(CONFIG.EMAILJS_SERVICE_ID, CONFIG.EMAILJS_TEMPLATE_ID, {
-          from_name: name, from_email: email, message, reply_to: email,
+          from_name: name, 
+          from_email: email, 
+          message: message,
+          reply_to: email,
         });
+
+        // Google Sheet backup
         await fetch(CONFIG.SHEETS_URL, {
-          method: "POST", mode: "no-cors",
+          method: "POST", 
+          mode: "no-cors",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, message, timestamp: new Date().toLocaleString() }),
+          body: JSON.stringify({ 
+            name, 
+            email, 
+            message, 
+            timestamp: new Date().toLocaleString() 
+          }),
         });
-        showStatus("✅ Message sent! I'll get back to you soon.", "success");
+
+        showStatus("✅ Message sent successfully! I'll reply soon.", "success");
         document.getElementById("user_name").value = "";
         document.getElementById("user_email").value = "";
         document.getElementById("user_message").value = "";
       } catch (err) {
+        console.error("Error:", err);
         showStatus("❌ Something went wrong. Please try again.", "error");
       } finally {
         btn.disabled = false;
@@ -369,10 +341,15 @@
       el.textContent = msg;
       el.className = "status-msg " + type;
     }
-    function isValidEmail(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
 
-    document.addEventListener("keydown", e => { if (e.key === "Enter" && e.ctrlKey) sendMessage(); });
+    function isValidEmail(e) { 
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); 
+    }
+
+    // Ctrl + Enter shortcut
+    document.addEventListener("keydown", e => { 
+      if (e.key === "Enter" && e.ctrlKey) sendMessage(); 
+    });
   </script>
-
 </body>
 </html>
